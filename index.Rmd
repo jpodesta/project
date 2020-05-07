@@ -1,0 +1,73 @@
+---
+title: "Analysis of NEON Woody plant vegetation structure data"
+author: "Jacob Podesta"
+date: "2020-05-07"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cosmo
+    hightlight: zenburn
+---
+# Background
+
+<img src="http://www.ubss.org.uk/images/committee/donkeys.gif" width="100%">
+
+The [NEON Woody plant vegetation structure dataset](https://data.neonscience.org/data-products/DP1.10098.001) contains structure measurements, including height, canopy diameter, and stem diameter, as well as mapped position of individual woody plants across the survey area.
+
+This data product contains the quality-controlled, native sampling resolution data from in-situ measurements of live and standing dead woody individuals and shrub groups, from all terrestrial NEON sites with qualifying woody vegetation. The exact measurements collected per individual depend on growth form, and these measurements are focused on enabling biomass and productivity estimation, estimation of shrub volume and biomass, and calibration / validation of multiple NEON airborne remote-sensing data products. 
+
+Our analyses focus on the **relationship between individual stem height and diameter** and how that relationship **varies across growth forms**.
+
+## Data
+
+```{r, echo=FALSE}
+knitr::read_chunk(here::here("analysis.R"))
+```
+
+```{r, analysis-setup, message=FALSE}
+
+```
+```{r}
+summary(individual)
+```
+
+```{r}
+DT::datatable(individual)
+```
+
+## Analysis
+
+```{r analysis-filter-data}
+
+```
+```{r analysis-set-factor-levels}
+
+```
+
+```{r analysis-fig1-barplot}
+
+```
+
+```{r analysis-fig2-violinplots}
+
+```
+
+```{r linear-model}
+
+```
+```{r analysis-lm-fig3-overall}
+
+```
+```{r analysis-lm-growth}
+
+```
+
+```{r analysis-lm-fig4-growth}
+
+```
+
+
+
+
+
